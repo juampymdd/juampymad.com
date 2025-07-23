@@ -1,25 +1,5 @@
 "use client";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import {
-  IBM_Plex_Sans,
-  Press_Start_2P,
-  Roboto,
-  Space_Grotesk,
-} from "next/font/google";
 import React, { useEffect, useState, useRef } from "react";
-const spaceGrotesk = Space_Grotesk({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-  style: "normal",
-  display: "swap",
-});
-
-const IBMPlexSans = IBM_Plex_Sans({
-  weight: ["400", "500", "700"],
-  subsets: ["latin"],
-  style: "normal",
-  display: "swap",
-});
 
 const sections = [
   { id: "inicio", label: "Inicio" },

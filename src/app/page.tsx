@@ -1,7 +1,5 @@
-import ProfileCard from "@/components/CardProfile";
 import DarkVeil from "@/components/DarkVeil";
 import DotGrid from "@/components/DotGrid";
-import { Navbar } from "@/components/Navbar";
 import { Header } from "@/components/sections/Header";
 
 export default function Home() {

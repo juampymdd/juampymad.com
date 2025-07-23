@@ -1,18 +1,6 @@
 import type { Metadata } from "next";
-import { Poppins, JetBrains_Mono, Plus_Jakarta_Sans } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-
-const poppins = Poppins({
-  variable: "--font-poppins",
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
