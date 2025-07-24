@@ -14,7 +14,7 @@ export const Hero = () => {
             {" "}
             Creamos tu
           </span>
-          <div className="flex justify-center bg-gradient-to-t from-violet-500/20 via-violet-500/10 ring ring-violet-950/50 to-transparent backdrop-blur-2xl rounded-xl px-2 py-2 min-w-[16rem] md:min-w-[18rem] xl:min-w-[31rem] shadow-2xl">
+          <div className="flex justify-center bg-gradient-to-t from-violet-500/20 via-violet-500/10 ring ring-violet-950/50 to-transparent backdrop-blur-2xl rounded-xl px-2 py-2 min-w-[11rem] md:min-w-[18rem] xl:min-w-[31rem] shadow-2xl">
             <RotatingText
               texts={["Landing Page", "Portfolio", "E-commerce", "App Mobile"]}
               mainClassName="text-2xl md:text-4xl xl:text-7xl font-bold text-white overflow-hidden rounded-lg"
@@ -31,9 +31,9 @@ export const Hero = () => {
         </div>
         <SplitText
           text="Llevamos tu presencia digital al siguiente nivel"
-          className="text-lg md:text-xl xl:text-2xl font-semibold text-center -mt-8"
+          className="text-lg md:text-xl xl:text-2xl font-semibold text-center -mt-8 text-violet-200 tracking-wider"
           delay={50}
-          duration={0.1}
+          duration={0.5}
           ease="power3.out"
           splitType="chars"
           from={{ opacity: 0, y: 40 }}
