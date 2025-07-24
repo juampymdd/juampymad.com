@@ -8,16 +8,16 @@ export const Hero = () => {
       <div className="absolute inset-0 flex flex-col items-center justify-center h-full">
         <DarkVeil />
       </div>
-      <div className="flex flex-col items-center justify-center h-full relative z-10">
-        <div className="flex absolute items-center top-[40%] p-6 left-1/2 -translate-x-1/2 -translate-y-1/2 gap-2">
-          <span className="text-5xl font-bold text-white mr-1">
+      <div className="flex flex-col items-center justify-center w-full h-full relative z-10">
+        <div className="flex absolute w-full justify-center items-center top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 gap-2">
+          <span className="text-2xl md:text-4xl xl:text-7xl font-bold text-white mr-1">
             {" "}
             Creamos tu
           </span>
-          <div className="flex justify-center bg-gradient-to-t from-violet-500/30 via-violet-500/10 to-transparent backdrop-blur-lg rounded-xl px-2 py-2 min-w-[21rem] shadow-2xl">
+          <div className="flex justify-center bg-gradient-to-t from-violet-500/20 via-violet-500/10 ring ring-violet-950/50 to-transparent backdrop-blur-2xl rounded-xl px-2 py-2 min-w-[16rem] md:min-w-[18rem] xl:min-w-[31rem] shadow-2xl">
             <RotatingText
               texts={["Landing Page", "Portfolio", "E-commerce", "App Mobile"]}
-              mainClassName=" text-5xl font-bold text-white overflow-hidden rounded-lg"
+              mainClassName="text-2xl md:text-4xl xl:text-7xl font-bold text-white overflow-hidden rounded-lg"
               staggerFrom={"last"}
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
@@ -31,7 +31,7 @@ export const Hero = () => {
         </div>
         <SplitText
           text="Llevamos tu presencia digital al siguiente nivel"
-          className="text-2xl font-semibold text-center -mt-8"
+          className="text-lg md:text-xl xl:text-2xl font-semibold text-center -mt-8"
           delay={50}
           duration={0.1}
           ease="power3.out"
