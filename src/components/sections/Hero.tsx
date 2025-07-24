@@ -31,7 +31,7 @@ export const Hero = () => {
         </div>
         <SplitText
           text="Llevamos tu presencia digital al siguiente nivel"
-          className="text-lg md:text-xl xl:text-2xl font-semibold text-center -mt-8 text-violet-200 tracking-wider"
+          className="text-xs px-4 md:text-xl xl:text-2xl font-semibold text-center -mt-8 md:mt-1 text-violet-200 tracking-wider"
           delay={50}
           duration={0.5}
           ease="power3.out"
