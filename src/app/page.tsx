@@ -1,15 +1,13 @@
-import DarkVeil from "@/components/DarkVeil";
 import DotGrid from "@/components/DotGrid";
 import { Header } from "@/components/sections/Header";
+import { Hero } from "@/components/sections/Hero";
 
 export default function Home() {
   return (
     <div>
       <Header />
 
-      <div className="w-full h-screen relative" id="inicio">
-        <DarkVeil />
-      </div>
+      <Hero />
       <div className="w-full h-screen relative" id="sobre-mi">
         <DotGrid
           dotSize={3}

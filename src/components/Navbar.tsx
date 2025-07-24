@@ -82,12 +82,12 @@ export const Navbar = () => {
       {/* Desktop Menu */}
       <nav className="hidden md:flex fixed md:items-center top-6 left-1/2 z-40 -translate-x-1/2 px-8 py-4 rounded-full backdrop-blur-xl bg-white/10 border border-white/20 shadow-2xl">
         {/* Logo */}
-        <div className="rounded-full px-2 border border-white/20 shadow-lg mr-10 flex items-center justify-center bg-gradient-to-t from-white/30 via-transparent to-transparent hover:bg-gradient-to-t hover:from-white/30 hover:via-transparent hover:to-transparent transition-all duration-300">
+        <div className="rounded-full px-2 ring shadow-sm ring-white/20 mr-10 flex items-center justify-center bg-gradient-to-t from-white/40 via-white/10 to-transparent hover:bg-gradient-to-t hover:from-white/30 hover:via-transparent hover:to-transparent transition-all duration-300">
           {/* <img src="/logo.svg" alt="Logo" className="w-14 h-14 " /> */}
           <div className="text-white text-xl font-normal select-none p-2 flex items-center justify-center gap-1 ">
             {/* <span className="text-2xl tracking-widest">Juampymad</span> */}
             <div className="flex items-center">
-              <span className="text-3xl pb-1 text-purple-500 font-bold">
+              <span className="text-3xl pb-1 text-purple-400 font-bold">
                 {">"}
               </span>
               <span className="text-2xl -m-1 pb-1 animate-pulse duration-75 font-bold">
