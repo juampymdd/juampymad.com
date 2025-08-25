@@ -16,7 +16,7 @@ export const Hero = () => {
           </span>
           <div className="flex justify-center bg-gradient-to-t from-violet-500/20 via-violet-500/10 ring ring-violet-950/50 to-transparent backdrop-blur-2xl rounded-xl px-2 py-2 min-w-[11rem] md:min-w-[18rem] xl:min-w-[31rem] shadow-2xl">
             <RotatingText
-              texts={["Landing Page", "Portfolio", "E-commerce", "App Mobile"]}
+              texts={["Landing Page", "Portfolio", "Web APP", "App Mobile"]}
               mainClassName="text-2xl md:text-4xl xl:text-7xl font-bold text-white overflow-hidden rounded-lg"
               staggerFrom={"last"}
               initial={{ y: "100%" }}
