@@ -5,7 +5,7 @@ import InfiniteScroll from "../InfiniteScroll";
 
 export const TechMarquee = () => {
   return (
-    <div className="h-screen overflow-hidden flex items-center justify-center">
+    <div className="h-screen overflow-hidden flex items-center justify-center z-1">
       <InfiniteScroll
         items={techIcons.map((icon) => ({
           content: <TechIcons key={icon.name} icon={icon} />,

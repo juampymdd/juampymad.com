@@ -42,7 +42,7 @@ export default function AboutMe({
   heightClass?: string;
 }) {
   return (
-    <section className="relative w-full py-14 sm:py-20">
+    <section className="relative w-full py-14 sm:py-20 z-[999]">
       {/* Background flair */}
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute -top-24 left-1/2 h-80 w-[56rem] -translate-x-1/2 rounded-full bg-gradient-to-r from-indigo-500/30 via-fuchsia-400/30 to-sky-400/20 blur-3xl" />
@@ -79,36 +79,36 @@ export default function AboutMe({
             {/* Summary / Value */}
             <motion.div
               {...fadeUp}
-              className="md:col-span-3 rounded-2xl border border-black/10 dark:border-white/10 bg-white/50 dark:bg-white/5 backdrop-blur p-6 shadow-sm"
+              className="md:col-span-3 rounded-2xl border border-black/10 dark:border-white/10 bg-white/70 dark:bg-white/5 backdrop-blur-lg p-6 shadow-sm"
             >
               <div className="flex items-start gap-3">
-                <Rocket className="mt-0.5 h-5 w-5 text-indigo-600" />
+                <Rocket className="mt-0.5 h-5 w-5 text-indigo-400" />
                 <div>
                   <h3 className="text-lg font-semibold">Lo que hago</h3>
                   <ul className="mt-3 space-y-2 text-sm leading-relaxed text-black/80 dark:text-white/80">
                     <li className="flex gap-2">
-                      <CheckCircle2 className="h-4 w-4 mt-0.5 text-indigo-600" />{" "}
+                      <CheckCircle2 className="h-4 w-4 mt-0.5 text-indigo-400" />{" "}
                       Diseño y desarrollo <strong>end‑to‑end</strong>: UI → API
                       → DB → infraestructura.
                     </li>
                     <li className="flex gap-2">
-                      <CheckCircle2 className="h-4 w-4 mt-0.5 text-indigo-600" />{" "}
+                      <CheckCircle2 className="h-4 w-4 mt-0.5 text-indigo-400" />{" "}
                       <strong>APIs</strong> (REST/SOAP/GraphQL) con
                       autenticación (<strong>JWT/OAuth2</strong>) e
                       integraciones externas.
                     </li>
                     <li className="flex gap-2">
-                      <CheckCircle2 className="h-4 w-4 mt-0.5 text-indigo-600" />{" "}
+                      <CheckCircle2 className="h-4 w-4 mt-0.5 text-indigo-400" />{" "}
                       <strong>CI/CD</strong> y despliegues en{" "}
                       <strong>Kubernetes</strong> con monitoreo, logs y alertas.
                     </li>
                     <li className="flex gap-2">
-                      <CheckCircle2 className="h-4 w-4 mt-0.5 text-indigo-600" />{" "}
+                      <CheckCircle2 className="h-4 w-4 mt-0.5 text-indigo-400" />{" "}
                       Modelado de datos y optimización en{" "}
                       <strong>PostgreSQL/Oracle/MySQL</strong>.
                     </li>
                     <li className="flex gap-2">
-                      <CheckCircle2 className="h-4 w-4 mt-0.5 text-indigo-600" />{" "}
+                      <CheckCircle2 className="h-4 w-4 mt-0.5 text-indigo-400" />{" "}
                       IA aplicada (RAG/chatbots sobre PDFs) cuando aporta valor
                       real.
                     </li>
@@ -182,7 +182,7 @@ export default function AboutMe({
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
                 <div>
                   <h4 className="mb-2 font-medium flex items-center gap-2">
-                    <Code2 className="h-4 w-4 text-indigo-600" /> Frontend
+                    <Code2 className="h-4 w-4 text-indigo-400" /> Frontend
                   </h4>
                   <ul className="space-y-1 text-black/80 dark:text-white/80">
                     <li>Next.js (App Router), React, Tailwind, shadcn‑ui</li>
@@ -190,7 +190,7 @@ export default function AboutMe({
                 </div>
                 <div>
                   <h4 className="mb-2 font-medium flex items-center gap-2">
-                    <ServerCog className="h-4 w-4 text-indigo-600" /> Backend
+                    <ServerCog className="h-4 w-4 text-indigo-400" /> Backend
                   </h4>
                   <ul className="space-y-1 text-black/80 dark:text-white/80">
                     <li>NestJS (TypeORM/Prisma), Node.js</li>
@@ -198,7 +198,7 @@ export default function AboutMe({
                 </div>
                 <div>
                   <h4 className="mb-2 font-medium flex items-center gap-2">
-                    <Database className="h-4 w-4 text-indigo-600" /> Datos
+                    <Database className="h-4 w-4 text-indigo-400" /> Datos
                   </h4>
                   <ul className="space-y-1 text-black/80 dark:text-white/80">
                     <li>PostgreSQL, Oracle, MySQL</li>
@@ -206,7 +206,7 @@ export default function AboutMe({
                 </div>
                 <div>
                   <h4 className="mb-2 font-medium flex items-center gap-2">
-                    <Layers className="h-4 w-4 text-indigo-600" /> DevOps
+                    <Layers className="h-4 w-4 text-indigo-400" /> DevOps
                   </h4>
                   <ul className="space-y-1 text-black/80 dark:text-white/80">
                     <li>Docker, Kubernetes, GitLab CI/CD, observabilidad</li>
@@ -214,7 +214,7 @@ export default function AboutMe({
                 </div>
                 <div className="sm:col-span-2">
                   <h4 className="mb-2 font-medium flex items-center gap-2">
-                    <ShieldCheck className="h-4 w-4 text-indigo-600" />{" "}
+                    <ShieldCheck className="h-4 w-4 text-indigo-400" />{" "}
                     Seguridad
                   </h4>
                   <ul className="space-y-1 text-black/80 dark:text-white/80">
