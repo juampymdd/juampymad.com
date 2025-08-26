@@ -15,7 +15,6 @@ import {
   ServerCog,
   Database,
 } from "lucide-react";
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
 /**
  * ProjectsSection.tsx — Grid estilo pricing (sin precios obligatorios)
@@ -128,11 +127,7 @@ const PLANS: Plan[] = [
   },
 ];
 
-export default function ProjectsSection({
-  heightClass = "h-full",
-}: {
-  heightClass?: string;
-}) {
+export default function ProjectsSection() {
   return (
     <>
       <section className="relative w-full py-14 sm:py-20">

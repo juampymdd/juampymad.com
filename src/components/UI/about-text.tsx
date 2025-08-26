@@ -37,7 +37,7 @@ const chip =
   "inline-flex items-center gap-2 rounded-full px-3 py-1 text-sm border border-white/10 bg-white/5 dark:bg-white/5 backdrop-blur";
 
 export default function AboutMe({
-  heightClass = "h-[67vh]",
+  heightClass = "h-full",
 }: {
   heightClass?: string;
 }) {
