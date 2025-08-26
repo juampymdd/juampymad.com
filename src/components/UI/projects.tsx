@@ -130,15 +130,15 @@ const PLANS: Plan[] = [
 export default function ProjectsSection() {
   return (
     <>
-      <section className="relative w-full py-14 sm:py-20">
+      <section className="relative w-full pt-20 py-20">
         {/* Background flair */}
         <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
           <div className="absolute -top-24 left-1/2 h-80 w-[56rem] -translate-x-1/2 rounded-full bg-gradient-to-r from-indigo-500/20 via-fuchsia-400/10 to-sky-400/20 blur-3xl" />
         </div>
 
-        <div className="mx-auto max-w-6xl px-6">
+        <div className="mx-auto max-w-[80vw] px-6">
           {/* Header */}
-          <motion.div {...fadeUp} className="mb-10 sm:mb-14 text-center">
+          <motion.div {...fadeUp} className="mb-10 pt-10 sm:mb-14 text-center">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
               <span className="bg-gradient-to-r from-indigo-600 via-fuchsia-600 to-sky-600 bg-clip-text text-transparent">
                 Proyectos que puedo construir
