@@ -5,12 +5,12 @@ import ProjectsSection from "../ui/projects";
 const ProjectsPage = () => {
   return (
     <div
-      className="w-full h-screen relative flex items-center justify-center bg-gray-100/10"
+      className="w-full h-full relative flex items-center justify-center bg-gray-100/10"
       id="proyectos"
     >
       {/* <h2 className="text-4xl font-bold text-[#5227FF]">Proyectos</h2> */}
 
-      <div style={{ width: "100%", height: "100vh", position: "absolute" }}>
+      <div style={{ width: "100%", height: "100%", position: "absolute" }}>
         <Prism
           animationType="rotate"
           timeScale={0.2}

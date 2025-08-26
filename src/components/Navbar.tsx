@@ -81,15 +81,15 @@ export const Navbar = () => {
   return (
     <>
       {/* Desktop Menu */}
-      <nav className="hidden md:flex fixed md:items-center top-6 left-1/2 z-40 -translate-x-1/2 px-8 py-4 rounded-full backdrop-blur-xl bg-white/10 border border-white/20 shadow-2xl">
+      <nav className="hidden md:flex fixed md:items-center top-6 left-1/2 z-40 -translate-x-1/2 px-4 py-2 rounded-full backdrop-blur-xl bg-white/10 border border-white/20 shadow-2xl">
         {/* Logo */}
-        <div className="rounded-full px-3 py-3 border border-white/20 shadow-lg mr-10 flex items-center justify-center bg-gradient-to-t from-[#2e0d68b2] via-[#2e0d688a] to-[#2e0d683d] hover:bg-gradient-to-t hover:from-white/30 hover:via-transparent hover:to-transparent transition-all duration-300 cursor-pointer">
+        <div className="rounded-full px-2 py-2 border border-white/20 shadow mr-6 flex items-center justify-center bg-gradient-to-t from-[#2e0d68b2] via-[#2e0d688a] to-[#2e0d683d] hover:bg-gradient-to-t hover:from-white/30 hover:via-transparent hover:to-transparent transition-all duration-300 cursor-pointer">
           <Image
             src="/mad-logo.png"
             alt="Logo"
-            width={56}
-            height={56}
-            className="w-14 h-14 hover:animate-bounce transition-transform duration-300"
+            width={48}
+            height={48}
+            className="w-12 h-12 hover:animate-bounce transition-transform duration-300"
           />
         </div>
         <div className="relative flex">
@@ -109,7 +109,7 @@ export const Navbar = () => {
                 linksRef.current[index] = el;
               }}
               href={`#${id}`}
-              className={`px-4 py-1 font-bold text-lg transition-all duration-700 border-none cursor-pointer ${
+              className={`px-3 py-0.5 font-semibold text-base transition-all duration-700 border-none cursor-pointer ${
                 activeSection === id
                   ? "text-white bg-gradient-to-t from-white/30 via-transparent to-transparent rounded-t-sm border-white"
                   : "text-white/70 hover:text-white hover:bg-gradient-to-t hover:from-white/30 hover:via-transparent hover:to-transparent"
@@ -125,28 +125,28 @@ export const Navbar = () => {
       {/* Mobile Menu */}
       <nav className="md:hidden fixed top-6 left-4 z-40">
         <button
-          className="w-12 h-12 flex flex-col justify-center items-center rounded-xl backdrop-blur-xl bg-white/10 border border-white/20 shadow-2xl"
+          className="w-10 h-10 flex flex-col justify-center items-center rounded-lg backdrop-blur-xl bg-white/10 border border-white/20 shadow"
           onClick={() => setOpen((o) => !o)}
         >
           <span
-            className={`block w-5 h-0.5 bg-white mb-1.5 transition-all duration-300 ${
+            className={`block w-4 h-0.5 bg-white mb-1.5 transition-all duration-300 ${
               open ? "rotate-45 translate-y-2" : ""
             }`}
           />
           <span
-            className={`block w-5 h-0.5 bg-white mb-1.5 transition-all duration-300 ${
+            className={`block w-4 h-0.5 bg-white mb-1.5 transition-all duration-300 ${
               open ? "opacity-0" : ""
             }`}
           />
           <span
-            className={`block w-6 h-0.5 bg-white transition-all duration-300 ${
+            className={`block w-5 h-0.5 bg-white transition-all duration-300 ${
               open ? "-rotate-45 -translate-y-2" : ""
             }`}
           />
         </button>
 
         <div
-          className={`absolute top-16 left-0 w-56 rounded-xl backdrop-blur-xl bg-white/10 border border-white/20 shadow-2xl flex flex-col gap-2 px-4 py-6 transition-all duration-300 ${
+          className={`absolute top-16 left-0 w-48 rounded-lg backdrop-blur-xl bg-white/10 border border-white/20 shadow flex flex-col gap-2 px-3 py-4 transition-all duration-300 ${
             open
               ? "opacity-100 scale-100"
               : "opacity-0 scale-95 pointer-events-none"
@@ -156,7 +156,7 @@ export const Navbar = () => {
             <a
               key={id}
               href={`#${id}`}
-              className={`px-4 py-3 font-bold text-lg transition-all duration-300 rounded-xl relative ${
+              className={`px-3 py-2 font-semibold text-base transition-all duration-300 rounded-md relative ${
                 activeSection === id
                   ? "text-white bg-white/20"
                   : "text-white/70 hover:text-white hover:bg-white/10"
