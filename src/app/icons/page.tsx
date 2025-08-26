@@ -1,4 +1,4 @@
-import { TechIcon, techIcons } from "@/components/UI/tech-icons.data";
+import { TechIcon, techIcons } from "@/components/ui/tech-icons.data";
 import Image from "next/image";
 import React from "react";
 

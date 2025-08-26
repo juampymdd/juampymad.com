@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import DotGrid from "../DotGrid";
-import { TechMarquee } from "../UI/tech-marquee";
-import AboutMe from "../UI/about-text";
+import { TechMarquee } from "../ui/tech-marquee";
+import AboutMe from "../ui/about-text";
 
 const About = () => {
   return (

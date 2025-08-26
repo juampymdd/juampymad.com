@@ -86,28 +86,35 @@ export default function AboutMe({
                 <div>
                   <h3 className="text-lg font-semibold">Lo que hago</h3>
                   <ul className="mt-3 space-y-2 text-sm leading-relaxed text-black/80 dark:text-white/80">
-                    <li className="flex gap-2">
+                    <li className="flex items-center justify-start gap-2">
                       <CheckCircle2 className="h-4 w-4 mt-0.5 text-indigo-400" />{" "}
                       Diseño y desarrollo <strong>end‑to‑end</strong>: UI → API
                       → DB → infraestructura.
                     </li>
-                    <li className="flex gap-2">
+                    <li className="flex items-center justify-start gap-2">
                       <CheckCircle2 className="h-4 w-4 mt-0.5 text-indigo-400" />{" "}
-                      <strong>APIs</strong> (REST/SOAP/GraphQL) con
-                      autenticación (<strong>JWT/OAuth2</strong>) e
-                      integraciones externas.
+                      <p>
+                        <strong>APIs</strong> (REST/SOAP/GraphQL) con
+                        autenticación (<strong>JWT/OAuth2</strong>) e
+                        integraciones externas.
+                      </p>
                     </li>
-                    <li className="flex gap-2">
+                    <li className="flex items-center justify-start gap-2">
                       <CheckCircle2 className="h-4 w-4 mt-0.5 text-indigo-400" />{" "}
-                      <strong>CI/CD</strong> y despliegues en{" "}
-                      <strong>Kubernetes</strong> con monitoreo, logs y alertas.
+                      <p>
+                        <strong>CI/CD</strong> y despliegues en{" "}
+                        <strong>Kubernetes</strong> con monitoreo, logs y
+                        alertas.
+                      </p>
                     </li>
-                    <li className="flex gap-2">
+                    <li className="flex items-center justify-start gap-2">
                       <CheckCircle2 className="h-4 w-4 mt-0.5 text-indigo-400" />{" "}
-                      Modelado de datos y optimización en{" "}
-                      <strong>PostgreSQL/Oracle/MySQL</strong>.
+                      <p>
+                        Modelado de datos y optimización en{" "}
+                        <strong>PostgreSQL/Oracle/MySQL</strong>.
+                      </p>
                     </li>
-                    <li className="flex gap-2">
+                    <li className="flex gap-2 ">
                       <CheckCircle2 className="h-4 w-4 mt-0.5 text-indigo-400" />{" "}
                       IA aplicada (RAG/chatbots sobre PDFs) cuando aporta valor
                       real.
