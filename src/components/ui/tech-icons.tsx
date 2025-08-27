@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export const TechIcons = ({ icon }: { icon: TechIcon }) => {
   return (
-    <div className="flex-col items-center justify-center p-2 gap-1 hover:scale-110 transition-transform duration-200 backdrop-blur-xs bg-gray-200/10 shadow-xl ring-1 ring-gray-300/40 rounded-full w-20 h-20 hidden md:inline-flex">
+    <div className="flex-col items-center justify-center p-2 gap-1 hover:scale-110 transition-transform duration-200 backdrop-blur-xs bg-gray-200/10 shadow-xl ring-1 ring-gray-300/40 rounded-full w-24 h-24 hidden md:inline-flex">
       <Image
         src={icon.src}
         alt={icon.label}
