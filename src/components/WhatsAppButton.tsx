@@ -7,7 +7,7 @@ import React, { useEffect, useState } from "react";
  * - Opens WhatsApp (web/mobile) in a new tab.
  */
 const WhatsAppButton: React.FC = () => {
-  const phone = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "";
+  const phone = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "5493435142121";
   const rawMessage =
     process.env.NEXT_PUBLIC_WHATSAPP_MESSAGE ??
     "Hola! Quiero consultar sobre sus servicios.";
