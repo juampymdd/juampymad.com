@@ -55,10 +55,10 @@ const PLANS: Plan[] = [
   {
     key: "landing",
     title: "Landing Page",
-    subtitle: "Tu carta de presentación, optimizada para convertir",
+    subtitle: "Presentá tu servicio y conseguí clientes",
     icon: Globe2,
     description:
-      "Una página de una sola vista, rápida, responsive y con SEO básico. Ideal para campañas, servicios puntuales y captar leads.",
+      "Landing optimizada para conversión: carga rápida, diseño responsive y CTAs integrados para captar leads y medir resultados.",
     idealFor: ["Lanzamientos", "Servicios profesionales", "Campañas de Ads"],
     benefits: [
       "1–3 secciones + CTA claro",
@@ -163,12 +163,12 @@ export default function ProjectsSection() {
 
           {/* Grid */}
           {/* <ScrollArea className={`w-full ${heightClass}`}> */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-fr">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-fr">
             {PLANS.map((plan) => (
               <motion.div
                 key={plan.key}
                 {...fadeUp}
-        className={`relative flex flex-col h-full rounded-2xl border p-6 shadow-sm backdrop-blur bg-white/50 dark:bg-white/5 ${
+                className={`relative flex flex-col h-full rounded-2xl border p-6 shadow-sm backdrop-blur bg-white/50 dark:bg-white/5 ${
                   plan.highlight
                     ? "border-indigo-400/40 ring-2 ring-indigo-400/30"
                     : "border-black/10 dark:border-white/10"
