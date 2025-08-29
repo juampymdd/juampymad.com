@@ -130,7 +130,7 @@ const PLANS: Plan[] = [
 export default function ProjectsSection() {
   return (
     <>
-      <section className="relative w-full pt-20 py-20">
+      <section className="relative w-full pt-20 py-20 backdrop-blur-md">
         {/* Background flair */}
         <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
           <div className="absolute -top-24 left-1/2 h-80 w-[56rem] -translate-x-1/2 rounded-full bg-gradient-to-r from-indigo-500/20 via-fuchsia-400/10 to-sky-400/20 blur-3xl" />
@@ -163,12 +163,12 @@ export default function ProjectsSection() {
 
           {/* Grid */}
           {/* <ScrollArea className={`w-full ${heightClass}`}> */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-fr">
             {PLANS.map((plan) => (
               <motion.div
                 key={plan.key}
                 {...fadeUp}
-                className={`relative rounded-2xl border p-6 shadow-sm backdrop-blur bg-white/50 dark:bg-white/5 ${
+        className={`relative flex flex-col h-full rounded-2xl border p-6 shadow-sm backdrop-blur bg-white/50 dark:bg-white/5 ${
                   plan.highlight
                     ? "border-indigo-400/40 ring-2 ring-indigo-400/30"
                     : "border-black/10 dark:border-white/10"
@@ -244,8 +244,8 @@ export default function ProjectsSection() {
                   </div>
                 </div>
 
-                {/* CTA */}
-                <div className="mt-5 flex flex-col sm:flex-row gap-3">
+                {/* CTA: push to bottom */}
+                <div className="mt-auto flex flex-col sm:flex-row gap-3">
                   <a
                     href={`#contacto?plan=${plan.key}`}
                     data-plan={plan.key}

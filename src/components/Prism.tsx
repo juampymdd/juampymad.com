@@ -62,11 +62,12 @@ const Prism: React.FC<PrismProps> = ({
     const HOVSTR = Math.max(0, hoverStrength || 1);
     const INERT = Math.max(0, Math.min(1, inertia || 0.12));
 
-    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    // Allow slightly higher DPR but keep a safe cap; enable antialiasing
+    const dpr = Math.min(2.5, window.devicePixelRatio || 1);
     const renderer = new Renderer({
       dpr,
       alpha: transparent,
-      antialias: false,
+      antialias: true,
     });
     const gl = renderer.gl;
     gl.disable(gl.DEPTH_TEST);
@@ -227,7 +228,8 @@ const Prism: React.FC<PrismProps> = ({
         uRot: { value: new Float32Array([1, 0, 0, 0, 1, 0, 0, 0, 1]) },
         uGlow: { value: GLOW },
         uOffsetPx: { value: offsetPxBuf },
-        uNoise: { value: NOISE },
+        // Scale noise by DPR so higher-density screens get less apparent grain
+        uNoise: { value: NOISE / Math.max(1, dpr) },
         uSaturation: { value: SAT },
         uScale: { value: SCALE },
         uHueShift: { value: HUE },
@@ -237,8 +239,9 @@ const Prism: React.FC<PrismProps> = ({
         uInvBaseHalf: { value: 1 / BASE_HALF },
         uInvHeight: { value: 1 / H },
         uMinAxis: { value: Math.min(BASE_HALF, H) },
+        // Reduce the effective pixel-step constant slightly to make the render finer
         uPxScale: {
-          value: 1 / ((gl.drawingBufferHeight || 1) * 0.1 * SCALE),
+          value: 1 / ((gl.drawingBufferHeight || 1) * 0.08 * SCALE),
         },
         uTimeScale: { value: TS },
       },
@@ -253,8 +256,12 @@ const Prism: React.FC<PrismProps> = ({
       iResBuf[1] = gl.drawingBufferHeight;
       offsetPxBuf[0] = offX * dpr;
       offsetPxBuf[1] = offY * dpr;
+      // keep uPxScale in sync with the initial constant above
       program.uniforms.uPxScale.value =
-        1 / ((gl.drawingBufferHeight || 1) * 0.1 * SCALE);
+        1 / ((gl.drawingBufferHeight || 1) * 0.08 * SCALE);
+      // also ensure noise scales with DPR if it was changed externally
+      if (program.uniforms.uNoise)
+        program.uniforms.uNoise.value = NOISE / Math.max(1, dpr);
     };
     const ro = new ResizeObserver(resize);
     ro.observe(container);

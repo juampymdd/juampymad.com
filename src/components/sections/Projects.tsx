@@ -10,16 +10,20 @@ const ProjectsPage = () => {
     >
       {/* <h2 className="text-4xl font-bold text-[#5227FF]">Proyectos</h2> */}
 
-      <div style={{ width: "100%", height: "100%", position: "absolute" }}>
+      <div
+        // style={{ width: "100%", height: "100%", position: "absolute" }}
+        className="w-full h-full absolute"
+      >
         <Prism
-          animationType="rotate"
+          animationType="3drotate"
           timeScale={0.2}
-          height={5}
+          height={4}
           baseWidth={5.5}
           scale={3.6}
           hueShift={1}
           colorFrequency={1}
-          glow={0.3}
+          glow={0.4}
+          bloom={1}
         />
       </div>
       <ProjectsSection />
